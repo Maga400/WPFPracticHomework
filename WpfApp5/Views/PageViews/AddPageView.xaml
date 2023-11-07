@@ -1,0 +1,56 @@
+﻿<Page x:Class="WpfApp5.Views.PageViews.AddPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5.Views.PageViews"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddPageView" Name="add">
+
+    <Grid Background="DarkBlue">
+        <StackPanel Height="70" Width="120" VerticalAlignment="Top" Margin="0 0 0 0" HorizontalAlignment="Left">
+            <Button Command="{Binding BackCommand}" CommandParameter="{Binding ElementName=add}" Background="Green" Height="50" Width="80" Content="Back" Margin="10 10 0 0" FontSize="20" Foreground="LightYellow" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 10 0 0">
+            <Label Foreground="LightYellow" Content="Id:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding User.id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="id" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 50 0 0">
+            <Label Foreground="LightYellow" Content="Name:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding User.name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="name" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 90 0 0">
+            <Label Foreground="LightYellow" Content="Username:" Height="35" FontSize="16"/>
+            <TextBox Text="{Binding User.username, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="username" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 130 0 0">
+            <Label Foreground="LightYellow"  Content="Email:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding User.email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="email" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 170 0 0">
+            <Label Foreground="LightYellow" Content="Street:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding Address.street, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="street" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 210 0 0">
+            <Label Foreground="LightYellow" Content="City:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding Address.city, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="city" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 250 0 0">
+            <Label Foreground="LightYellow" Content="Website:" Height="35" FontSize="18"/>
+            <TextBox Text="{Binding User.website, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="website" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 290 0 0">
+            <Label Foreground="LightYellow" Content="C-name:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding Company.name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="cname" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="30" Width="500" VerticalAlignment="Top" Margin="0 330 0 0">
+            <Label Foreground="LightYellow" Content="Bs:" Height="35" FontSize="20"/>
+            <TextBox Text="{Binding Company.bs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Name="Bs" Height="30" Width="400" Margin="70 -30 0 0"/>
+        </StackPanel>
+        <StackPanel Height="40" Width="500" VerticalAlignment="Top" Margin="0 370 0 0">
+            <Button Background="Green" Command="{Binding AddCommand}" Height="40" Width="200" Content="Add" FontSize="20" Foreground="LightYellow"/>
+        </StackPanel>
+    </Grid>
+</Page>

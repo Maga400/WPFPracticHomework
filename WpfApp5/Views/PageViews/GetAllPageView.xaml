@@ -1,0 +1,34 @@
+﻿<Page x:Class="WpfApp5.Views.PageViews.GetAllPageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5.Views.PageViews"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="GetAllPageView" Name="get">
+
+    <Grid Background="DimGray">
+        <StackPanel Height="70" Width="120" VerticalAlignment="Top" Margin="-10 0 0 0" HorizontalAlignment="Left">
+            <Button Command="{Binding BackCommand}" CommandParameter="{Binding ElementName=get}" Background="Blue" Height="50" Width="80" Content="Back" Margin="20 10 0 0" FontSize="20" Foreground="LightYellow" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <ListView Background="DarkBlue" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="600" ItemsSource="{Binding Users}" Margin="30 0 0 0">
+            <ListView.View>
+                <GridView >
+                    <GridView.Columns>
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding id}"/>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding name}"/>
+                        <GridViewColumn Header="Username" DisplayMemberBinding="{Binding username}"/>
+                        <GridViewColumn Header="Email" DisplayMemberBinding="{Binding email}"/>
+                        <GridViewColumn Header="Street" DisplayMemberBinding="{Binding address.street}"/>
+                        <GridViewColumn Header="City" DisplayMemberBinding="{Binding address.city}"/>
+                        <GridViewColumn Header="Website" DisplayMemberBinding="{Binding website}"/>
+                        <GridViewColumn Header="Company Name" DisplayMemberBinding="{Binding company.name}"/>
+                        <GridViewColumn Header="BS" DisplayMemberBinding="{Binding company.bs}"/>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>
